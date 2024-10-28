@@ -11,7 +11,9 @@ import com.dicoding.myunlimitedquotes.network.QuoteResponseItem
     version = 1,
     exportSchema = false
 )
-abstract class QuoteDatabase : RoomDatabase() {
+abstract class QuoteDatabase : RoomDatabase()  {
+
+    abstract fun quoteDao(): QuoteDao
 
     companion object {
         @Volatile
